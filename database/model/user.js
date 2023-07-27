@@ -1,7 +1,7 @@
 const DataTypes = require('sequelize').DataTypes;
 const connector = require('../db.js');
 
-const Item = connector.sequelize.define('item',{
+const User = connector.sequelize.define('user',{
     id:{
         type:DataTypes.INTEGER,
         primaryKey:true,
@@ -12,18 +12,10 @@ const Item = connector.sequelize.define('item',{
         type:DataTypes.STRING,
         allowNull:false
     },
-    price :{
-        type:DataTypes.INTEGER,
+    password:{
+        type:DataTypes.STRING,
         allowNull:false
-    },
-    type :{
-        type:DataTypes.INTEGER,
-        allowNull:false
-    },
-    amount :{
-        type:DataTypes.INTEGER,
-        allowNull:false
-    },
-},{timestamps:false})
+    }
+})
 
-module.exports = Item
+module.exports = User
