@@ -10,15 +10,15 @@ const Option = connector.sequelize.define('option',{
     },
     extra : {
         type:DataTypes.INTEGER,
-        allowNull:false
+        allowNull:true
     },
     shot :{
         type:DataTypes.INTEGER,
-        allowNull:false
+        allowNull:true
     },
     hot :{
-        type:DataTypes.INTEGER,
-        allowNull:false
+        type:DataTypes.BOOLEAN,
+        allowNull:true
     }
 })
 

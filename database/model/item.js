@@ -17,13 +17,20 @@ const Item = connector.sequelize.define('item',{
         allowNull:false
     },
     type :{
-        type:DataTypes.INTEGER,
+        type:DataTypes.ENUM,
+        values : ['juice','bakery','etc'],
         allowNull:false
     },
     amount :{
         type:DataTypes.INTEGER,
-        allowNull:false
+        allowNull:false,
+        defaultValue:0
     },
+    count : {
+        type:DataTypes.INTEGER,
+        allowNull:true,
+        defaultValue:1
+    }
 },{timestamps:false})
 
 module.exports = Item

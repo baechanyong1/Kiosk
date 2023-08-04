@@ -9,7 +9,7 @@ const OrderCustomer = connector.sequelize.define('orderCustomer',{
         autoIncrement:true,
     },  
     state : {
-        type:DataTypes.INTEGER,
+        type:DataTypes.BOOLEAN,
         allowNull:false
     }
 })

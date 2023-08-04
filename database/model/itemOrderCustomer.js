@@ -10,7 +10,8 @@ const ItemOrder = connector.sequelize.define('itemOrderCustomer',{
     },
     amount : {
         type:DataTypes.INTEGER,
-        allowNull:false
+        allowNull:false,
+        defaultValue:1
     }
 })
 

@@ -29,6 +29,11 @@ class UserService {
         const deleteUser = await this.userRepository.deleteUser(id,name,password)
         return deleteUser
     }
+
+    putUser = async(id,name,password)=>{
+        const putUser = await this.userRepository.putUser(id,name,password)
+        return putUser
+    }
     }
 
     
